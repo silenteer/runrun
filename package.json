@@ -1,0 +1,19 @@
+{
+  "bin": "./bin/index.js",
+  "name": "runrun",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:silenteer/runrun.git",
+  "license": "MIT",
+  "dependencies": {
+    "command-line-args": "^5.2.1",
+    "command-line-usage": "^6.1.3",
+    "esbuild": "^0.15.12",
+    "esbuild-register": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/command-line-args": "^5.2.0",
+    "@types/command-line-usage": "^5.0.2",
+    "@types/node": "^18.11.2"
+  }
+}
