@@ -1,7 +1,9 @@
 {
-  "bin": "./bin/index.js",
-  "name": "runrun",
-  "version": "1.0.0",
+  "bin": {
+    "rr": "./bin/index.js"
+  },
+  "name": "@silenteer/run",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "git@github.com:silenteer/runrun.git",
   "license": "MIT",
