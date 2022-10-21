@@ -156,8 +156,7 @@ if (options.help) {
 		maybePromise = lodash.invoke(mod, options.at, ...options.arg)
 
 		if (util.types.isPromise(maybePromise)) {
-			maybePromise
-				.then(() => process.exit(0))
+			maybePromise.then()
 		}
 	} catch (e) {
 		console.error("Process is terminated due to", e)
