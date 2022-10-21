@@ -3,7 +3,7 @@
     "rr": "./bin/index.js"
   },
   "name": "@silenteer/run",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "repository": "git@github.com:silenteer/runrun.git",
   "license": "MIT",
