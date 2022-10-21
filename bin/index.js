@@ -127,6 +127,7 @@ if (options.help) {
 	let target
 	if (options.at) {
 		target = lodash.get(mod, options.at)
+		
 		if (target) {
 			trace("Found target", {target, mod, options})
 		} else {
@@ -137,22 +138,22 @@ if (options.help) {
 		target = mod
 	}
 	
-	if (typeof target !== 'function') {
-		console.error("Target is not a function", { mod, target})
-		process.exit(2)
-	}
+	// if (typeof target !== 'function') {
+	// 	console.error("Target is not a function", { mod, target})
+	// 	process.exit(2)
+	// }
 
-	trace("target requires", target.length, "arguments")
-	if (target.length > options.arg.length) {
-		console.log("WARN -", "target requires more arguments than given")
-	}
+	// trace("target requires", target.length, "arguments")
+	// if (target.length > options.arg.length) {
+	// 	console.log("WARN -", "target requires more arguments than given")
+	// }
 
 	let maybePromise
 	
 	try {
 		
 		trace("Looking for default method", {target: target[options.method], mod, options})
-		maybePromise = target.apply(null, options.arg)
+		maybePromise = lodash.invoke(mod, options.at, ...options.arg)
 
 		if (util.types.isPromise(maybePromise)) {
 			maybePromise

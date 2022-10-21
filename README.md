@@ -1,15 +1,16 @@
-# runrun
-Run run is a cli to quickly test a library, either in typescript or js. Most of libraries don't expose a executable method to test in cli, and `runrun` is here to solve
+# rr
+Run run is a cli to quickly test a library, either in typescript or js. Most of libraries don't expose a executable method to test in cli, and `rr` is here to solve
 
 # getting started
 
-- Add `runrun` to dev dependencies like - `yarn install @silenteer/runrun`
-- Can use `yarn runrun -h` to see options
+- Add `rr` to dev dependencies like - `yarn install @silenteer/run`
+- Can use `yarn rr -h` to see options
 
 # Example
 
-- `yarn runrun ./index.ts` to call default export function without any parameters
-- `yarn runrun ./index.ts -m echo -a 'Hello world'` to call method `echo` of the export with `Hello world` as an argument. Argument can be added multiple times
+- `yarn rr ./index.ts` to call default export function without any parameters
+- `yarn rr ./index.ts --at echo -a 'Hello world'` to call method `echo` of the export with `Hello world` as an argument. Argument can be added multiple times
+- `yarn rr ./index.ts --at echo.start` to execute method start of the export of the `echo` instance
 
 # Argument data types
 Argument employs a simple syntax to determine data type. These are supported data types for argument

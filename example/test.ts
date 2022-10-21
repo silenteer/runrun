@@ -18,7 +18,10 @@ const sleepy = () => new Promise(resolve => {
 
 
 const testTarget = {
-    echo
+    echo,
+    thisEcho(test: string) {
+        this.echo(test)
+    }
 }
 
 export { testTarget, echo, sleepy }
