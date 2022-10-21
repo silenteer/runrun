@@ -15,4 +15,10 @@ const sleepy = () => new Promise(resolve => {
         }
     }, 500)
 })
-export { echo, sleepy }
+
+
+const testTarget = {
+    echo
+}
+
+export { testTarget, echo, sleepy }
